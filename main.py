@@ -11,7 +11,7 @@ config = configparser.ConfigParser()
 saveGamePath = path.expandvars(r'%LOCALAPPDATA%' + r'\UNDERTALE\undertale.ini')
 
 # Discord Stuff
-client_id = '123456789101112'
+client_id = '674010865879744552' # Official Application ID, you can use ur own
 RPC = Presence(client_id)
 RPC.connect()
 
