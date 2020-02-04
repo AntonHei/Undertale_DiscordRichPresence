@@ -8,12 +8,13 @@ import json
 
 # General
 config = configparser.ConfigParser()
+drpconfig = configparser.ConfigParser()
+undertaleDRPConfig = path.expandvars('config.ini')
 saveGamePath = path.expandvars(r'%LOCALAPPDATA%' + r'\UNDERTALE\undertale.ini')
 
-# Discord Stuff
-client_id = '674010865879744552' # Official Application ID, you can use ur own
-RPC = Presence(client_id)
-RPC.connect()
+# UNDERTALE_DRP Data
+config_areaBigLogoState = False
+config_discordAppClientID = ""  # Will be changed automaticaly
 
 # UNDERTALE Data
 data_kills = ""
@@ -27,9 +28,9 @@ data_deaths = ""
 
 # Runtime Vars
 startTime = ""
+RPC = None
 
 # Others
-
 areaPicNames = {
     "Ruinen": "ruins",
     "Snowdin": "snowdin",
@@ -48,13 +49,27 @@ with open('undertale_data.json') as f:
 
 # Config Loadup
 def configLoad():
+    drpconfig.read(undertaleDRPConfig)
     config.read(saveGamePath)
+
+def discordInit():
+    global RPC
+    client_id = config_discordAppClientID
+    RPC = Presence(client_id)
+    RPC.connect()
+
+def getDRPConfigData(section, dataname):
+    return drpconfig[section][dataname]
 
 def getConfigData(section, dataname):
     return config[section][dataname]
 
 def prepareData():
-    global data_kills, data_roomName, data_roomArea, data_Name, data_LV, data_playtimeSeconds, data_playtimeHours, data_deaths
+    global data_kills, data_roomName, data_roomArea, data_Name, data_LV, data_playtimeSeconds, data_playtimeHours, data_deaths, config_areaBigLogoState, config_discordAppClientID
+
+    # Getting the UndertaleDRP Config settings
+    config_areaBigLogoState = str(clearString(getDRPConfigData('UndertaleDRP', 'areaBigLogo')).split(".")[0])
+    config_discordAppClientID = str(clearString(getDRPConfigData('UndertaleDRP', 'discordAppClientID')).split(".")[0])
 
     # Getting the Data
     curKills = str(clearString(getConfigData('General', 'Kills')).split(".")[0])
@@ -86,32 +101,51 @@ def startUpdatePresence():
     print("Started Rich Presence")
     startTime = time.time()-int(data_playtimeSeconds)
 
-    RPC.update(
-            large_image="undertale",
+    if(config_areaBigLogoState == "True"):
+        RPC.update(
             details=data_roomName+" in "+data_roomArea,
             start=time.time()-int(data_playtimeSeconds),
-            large_text="UNDERTALE",
+            large_image=getAreaPicName(data_roomArea),
+            large_text=data_roomArea,
+            state="LV: "+data_LV+" with "+data_kills+" kills"
+        )
+    else:
+        RPC.update(
+            details=data_roomName + " in " + data_roomArea,
+            start=time.time() - int(data_playtimeSeconds),
             small_image=getAreaPicName(data_roomArea),
             small_text=data_roomArea,
-            state="LV: "+data_LV+" with "+data_kills+" kills"
-            )
+            large_image="undertale",
+            large_text="UNDERTALE",
+            state="LV: " + data_LV + " with " + data_kills + " kills"
+        )
 
 def updatePresence():
     print("Updated Rich Presence")
 
-    RPC.update(
-            large_image="undertale",
-            details=data_roomName+" in "+data_roomArea,
+    if (config_areaBigLogoState == "True"):
+        RPC.update(
+            details=data_roomName + " in " + data_roomArea,
             start=startTime,
-            large_text="UNDERTALE",
+            large_image=getAreaPicName(data_roomArea),
+            large_text=data_roomArea,
+            state="LV: " + data_LV + " with " + data_kills + " kills"
+        )
+    else:
+        RPC.update(
+            details=data_roomName + " in " + data_roomArea,
+            start=startTime,
             small_image=getAreaPicName(data_roomArea),
             small_text=data_roomArea,
-            state="LV: "+data_LV+" with "+data_kills+" kills"
-            )
+            large_image="undertale",
+            large_text="UNDERTALE",
+            state="LV: " + data_LV + " with " + data_kills + " kills"
+        )
 
 # Startup Discord Rich Presence
 configLoad()
 prepareData()
+discordInit()
 startUpdatePresence()
 
 # Update Prodcedure
