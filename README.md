@@ -7,13 +7,11 @@ So every time you save, the stats will refesh after a period of time (every 10 s
 The script catches data like kills, playtime, deaths, LV, Room, Area and so on.
 What the discord Presence shows can be setup in the **config.ini**, as well as the language, the refreshInterval and the Discord App ClientID.
 
-In Discord it looks like this:
+# What it looks like #
 <br>
 ![With big Area Logo](https://image.prntscr.com/image/EbN7iA1iTX_XohTgqYHQ1g.png)
 <br>
-<br>
-or like this, if you change it so in the config.ini
-<br>
+**or like this, if you change it so in the config.ini**
 <br>
 ![With small Area Logo and Big Undertale Logo](https://image.prntscr.com/image/I6xIunX9TF6mkUPyUr33cQ.png)
 
