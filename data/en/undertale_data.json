@@ -1,0 +1,1384 @@
+{
+	"areaDiscordAppPicNames": [
+		{
+			"Ruins": "ruins",
+    		"Snowdin": "snowdin",
+    		"Error": "error",
+    		"Waterfall": "waterfall",
+    		"Hotland": "hotland",
+    		"CORE": "core",
+    		"New Home": "newhome",
+    		"True Lab": "truelab",
+    		"Secret": "secret"
+		}
+	],
+    "rooms": [
+        {
+            "roomID": "0",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "1",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "2",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "3",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "4",
+            "Name": "Beginning",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "5",
+            "Name": "Flowey's Room",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "6",
+            "Name": "First Hall",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "7",
+            "Name": "First Puzzle",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "8",
+            "Name": "Switch Room",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "9",
+            "Name": "Spike Room",
+            "Area": "Ruins",
+            "undefined": "T"
+        },
+        {
+            "roomID": "10",
+            "Name": "Long Hall 1",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "11",
+            "Name": "Long Hall 2",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "12",
+            "Name": "Leaf Piles",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "13",
+            "Name": "Candy Bowl",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "14",
+            "Name": "Hole Puzzle 1",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "15",
+            "Name": "Rock Puzzle 1",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "16",
+            "Name": "Hole Puzzle 2",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "17",
+            "Name": "Rock Puzzle 2",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "18",
+            "Name": "Mouse SAVE 1",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "19",
+            "Name": "Napstablook",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "20",
+            "Name": "Ruins Bakesale",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "21",
+            "Name": "Froggit Hall",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "22",
+            "Name": "Hole Puzzle 3",
+            "Area": "Ruins"
+
+        },
+        {
+            "roomID": "23",
+            "Name": "Color Puzzle 1",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "24",
+            "Name": "Color Puzzle 2",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "25",
+            "Name": "Color Puzzle 3",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "26",
+            "Name": "Color Puzzle 4",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "27",
+            "Name": "Color Puzzle Fail",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "28",
+            "Name": "Road Fork",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "29",
+            "Name": "Froggit Alley",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "30",
+            "Name": "Toy Knife",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "31",
+            "Name": "Home",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "32",
+            "Name": "Home Walkway",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "33",
+            "Name": "Home Living Room",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "34",
+            "Name": "Home Hallway",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "35",
+            "Name": "Toriel's Room",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "36",
+            "Name": "Guest Room",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "37",
+            "Name": "Kitchen",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "38",
+            "Name": "Basement Hall 1",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "39",
+            "Name": "Basement Hall 2",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "40",
+            "Name": "Basement Hall 3",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "41",
+            "Name": "Basement Exit",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "42",
+            "Name": "Basement Hall 4",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "43",
+            "Name": "Ruins Exit",
+            "Area": "Ruins"
+        },
+        {
+            "roomID": "44",
+            "Name": "Snowdin Entrance",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "45",
+            "Name": "Sans' Station",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "46",
+            "Name": "Snowdin Fork 1",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "47",
+            "Name": "Fishing Rod",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "48",
+            "Name": "Papyrus' Station",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "49",
+            "Name": "Doggo's Station",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "50",
+            "Name": "Ice Room",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "51",
+            "Name": "Snowman",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "52",
+            "Name": "Invisible Walls",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "53",
+            "Name": "BALL Room",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "54",
+            "Name": "Dogi's Houses",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "55",
+            "Name": "Crossword Puzzle",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "56",
+            "Name": "Mouse SAVE 2",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "57",
+            "Name": "Dogi + Puzzle",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "58",
+            "Name": "X/O Puzzle 1",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "59",
+            "Name": "X/O Puzzle 2",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "60",
+            "Name": "\"Random\" Puzzle",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "61",
+            "Name": "Snowdog Room",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "62",
+            "Name": "Ice X/O Fail",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "63",
+            "Name": "Ice X/O Puzzle",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "64",
+            "Name": "Snowy Cliff",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "65",
+            "Name": "Entrance to Cave",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "66",
+            "Name": "Snow Poff Room",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "67",
+            "Name": "Bridge to Snowdin",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "68",
+            "Name": "Snowdin",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "69",
+            "Name": "Ice Wolf",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "70",
+            "Name": "Snowdin Ferry",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "71",
+            "Name": "Inn 1",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "72",
+            "Name": "Inn 2",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "73",
+            "Name": "Grillby's",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "74",
+            "Name": "Library",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "75",
+            "Name": "Garage",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "76",
+            "Name": "Skeleton House",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "77",
+            "Name": "Papyrus' Room",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "78",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "79",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "80",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "81",
+            "Name": "Foggy Path",
+            "Area": "Snowdin"
+        },
+        {
+            "roomID": "82",
+            "Name": "Cave to Waterfall",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "83",
+            "Name": "Sans' WF Station",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "84",
+            "Name": "Waterfall Box 1",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "85",
+            "Name": "Dusty Tutu",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "86",
+            "Name": "Undyne Encounter 1",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "87",
+            "Name": "Bridge Seeds 1",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "88",
+            "Name": "Bridge Seeds 2",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "89",
+            "Name": "Abandoned Quiche",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "90",
+            "Name": "Wishing Room",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "91",
+            "Name": "Ancient Writing Hall 1",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "92",
+            "Name": "Undyne Path 1",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "93",
+            "Name": "Undyne Encounter 2",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "94",
+            "Name": "Mouse SAVE 3",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "95",
+            "Name": "Waterfall Box 2",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "96",
+            "Name": "Waterfall Nice Cream",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "97",
+            "Name": "Waterfall Path 1",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "98",
+            "Name": "Ballet Shoes",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "99",
+            "Name": "Bird",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "100",
+            "Name": "Onionsan",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "101",
+            "Name": "Shyren's Room",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "102",
+            "Name": "Piano Room",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "103",
+            "Name": "Ancient Artifact",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "104",
+            "Name": "Ancient Statue",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "105",
+            "Name": "Umbrella Dispenser",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "106",
+            "Name": "Rainy Path 1",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "107",
+            "Name": "Rainy Path 2",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "108",
+            "Name": "Castle View",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "109",
+            "Name": "Umbrella Return",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "110",
+            "Name": "Ancient Writing Hall 2",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "111",
+            "Name": "Undyne Path 2",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "112",
+            "Name": "Undyne Path 3",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "113",
+            "Name": "Garbage Dump 1",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "114",
+            "Name": "Garbage Dump 2",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "115",
+            "Name": "Garbage Dump 3",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "116",
+            "Name": "Quiet Area",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "117",
+            "Name": "Undyne's House Entrance",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "118",
+            "Name": "Undyne's House",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "119",
+            "Name": "Ghost Houses",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "120",
+            "Name": "Napstablook's House",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "121",
+            "Name": "Mettaton's House",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "122",
+            "Name": "Blook Family Farm",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "123",
+            "Name": "  ? ? ? ? ? ? ? ?   ",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "124",
+            "Name": "Waterfall Shop",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "125",
+            "Name": "Waterfall Ferry",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "126",
+            "Name": "Dual Waterfalls",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "127",
+            "Name": "Mushroom Maze",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "128",
+            "Name": "Temmie Village",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "129",
+            "Name": "Lantern Maze",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "130",
+            "Name": "Undyne Encounter 3",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "131",
+            "Name": "Prophecy Room",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "132",
+            "Name": "Waterfall Bridge",
+            "Area": "Waterfall"
+
+        },
+        {
+            "roomID": "133",
+            "Name": "Connecting Room",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "134",
+            "Name": "Undyne Arena",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "135",
+            "Name": "Tunnel to Hotland",
+            "Area": "Waterfall"
+        },
+        {
+            "roomID": "136",
+            "Name": "Hotland Entrance",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "137",
+            "Name": "Sans' Station (Hotland)",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "138",
+            "Name": "Water Cooler",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "139",
+            "Name": "Lab Entrance",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "140",
+            "Name": "Hotland Ferry",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "141",
+            "Name": "Alphys' Lab",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "142",
+            "Name": "Alphys' Lab Upper",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "143",
+            "Name": "Hotland Pathway 1",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "144",
+            "Name": "Conveyer Belt 1",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "145",
+            "Name": "Magma Zone",
+            "Area": "Hotland",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "146",
+            "Name": "Burnt Pan",
+            "Area": "Hotland",
+            "Signifigance": "Weapon - Burnt Pan"
+        },
+        {
+            "roomID": "147",
+            "Name": "Laser Puzzle",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "148",
+            "Name": "Puzzle Fork 1",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "149",
+            "Name": "Path to Puzzle Leftt",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "150",
+            "Name": "Shot Puzzle Left",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "151",
+            "Name": "Path to Puzzle Right",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "152",
+            "Name": "Shot Puzzle Right",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "153",
+            "Name": "Path to CWaKR",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "154",
+            "Name": "Cooking With A Killer Robot",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "155",
+            "Name": "CORE View 1",
+            "Area": "Hotland",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "156",
+            "Name": "R1 Elevator Door",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "157",
+            "Name": "R2 Elevator Door",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "158",
+            "Name": "Sans' Hot Dog Stand",
+            "Area": "Hotland",
+            "Signifigance": "Shop"
+        },
+        {
+            "roomID": "159",
+            "Name": "Hotland 3/4-way",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "160",
+            "Name": "Art Club",
+            "Area": "Hotland",
+            "Signifigance": "Boss - So Sorry! (Secret)"
+        },
+        {
+            "roomID": "161",
+            "Name": "Stained Apron",
+            "Area": "Hotland",
+            "Signifigance": "Accessory - Stained Apron"
+        },
+        {
+            "roomID": "162",
+            "Name": "Timing Puzzle",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "163",
+            "Name": "Steam Puzzle 1",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "164",
+            "Name": "Bad Opinion Zone",
+            "Area": "Hotland",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "165",
+            "Name": "RG01/RG02",
+            "Area": "Hotland",
+            "Signifigance": "Battle - RG 01+02"
+        },
+        {
+            "roomID": "166",
+            "Name": "Live Report",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "167",
+            "Name": "CORE View 2",
+            "Area": "Hotland",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "168",
+            "Name": "L2 Elevator Door",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "169",
+            "Name": "L3 Elevator Door",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "170",
+            "Name": "Spider Parlor",
+            "Area": "Hotland",
+            "Signifigance": "Shop"
+        },
+        {
+            "roomID": "171",
+            "Name": "Steam Puzzle 2",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "172",
+            "Name": "Path to Puzzle Down",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "173",
+            "Name": "Shot Puzzle Down",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "174",
+            "Name": "Path to Puzzle Up",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "175",
+            "Name": "Shot Puzzle Up",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "176",
+            "Name": "Spider Entrance",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "177",
+            "Name": "Spiderweb",
+            "Area": "Hotland",
+            "Signifigance": "Boss - Muffet (Conditional)"
+        },
+        {
+            "roomID": "178",
+            "Name": "Spider Exit",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "179",
+            "Name": "Undertale - The Musical",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "180",
+            "Name": "\"Random\" Puzzle Hotland",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "181",
+            "Name": "Hotland Nice Cream ",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "182",
+            "Name": "Hotel Entrance",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "183",
+            "Name": "Hotel Lobby",
+            "Area": "Hotland",
+            "Signifigance": "SAVE / Shop"
+        },
+        {
+            "roomID": "184",
+            "Name": "Hotel Resturaunt",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "185",
+            "Name": "Hotel Hallway",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "186",
+            "Name": "Hotel Room",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "187",
+            "Name": "R3 Elevator Door",
+            "Area": "Hotland"
+        },
+        {
+            "roomID": "188",
+            "Name": "CORE Entrance",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "189",
+            "Name": "CORE Lower Elevator",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "190",
+            "Name": "Flaming Pit",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "191",
+            "Name": "CORE Hall 1",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "192",
+            "Name": "CORE Lasers 1",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "193",
+            "Name": "CORE Crossroads",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "194",
+            "Name": "CORE Ambush",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "195",
+            "Name": "CORE Lasers 2",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "196",
+            "Name": "CORE Branch",
+            "Area": "CORE",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "197",
+            "Name": "CORE West Lower",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "198",
+            "Name": "CORE West Mid",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "199",
+            "Name": "CORE West Upper",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "200",
+            "Name": "CORE North Upper",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "201",
+            "Name": "CORE East Upper",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "202",
+            "Name": "CORE East Mid",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "203",
+            "Name": "CORE East Lower",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "204",
+            "Name": "CORE North Mid",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "205",
+            "Name": "CORE Shot Puzzle",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "206",
+            "Name": "CORE West Trash",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "207",
+            "Name": "CORE East trash",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "208",
+            "Name": "CORE Battle Path",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "209",
+            "Name": "CORE End",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "210",
+            "Name": "CORE Upper Elevator",
+            "Area": "CORE",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "211",
+            "Name": "Mettaton's Stage",
+            "Area": "CORE",
+            "Signifigance": "Boss - Mettaton EX/NEO (Pacifist/Neutral and Genocide, respectively)"
+        },
+        {
+            "roomID": "212",
+            "Name": "Path to Long Elevator",
+            "Area": "CORE",
+            "Signifigance": "EXIT"
+        },
+        {
+            "roomID": "213",
+            "Name": "Hotland Elevator Interior",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "214",
+            "Name": "L1 Elevator Door",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "215",
+            "Name": "Long Elevator Interior",
+            "Area": "CORE"
+        },
+        {
+            "roomID": "216",
+            "Name": "Castle Elevator",
+            "Area": "New Home",
+            "Signifigance": "ENTRANCE"
+        },
+        {
+            "roomID": "217",
+            "Name": "Backstory Path",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "218",
+            "Name": "New Home Path",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "219",
+            "Name": "New Home",
+            "Area": "New Home",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "220",
+            "Name": "Walkway",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "221",
+            "Name": "Living Room",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "222",
+            "Name": "Hallway",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "223",
+            "Name": "Asgore's Room",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "224",
+            "Name": "Kids' Room",
+            "Area": "New Home",
+            "Signifigance": "Weapon/Accessory - Worn Dagger/Heart Locket (Pacifist & Mixed only), Real Knife/The Locket (Genocide only)"
+        },
+        {
+            "roomID": "225",
+            "Name": "Kitchen",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "226",
+            "Name": "Basement Hall 1",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "227",
+            "Name": "Basement Hall 2",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "228",
+            "Name": "Basement Hall 3 ",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "229",
+            "Name": "Basement Hall 4",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "230",
+            "Name": "Basement Hall 5",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "231",
+            "Name": "Last Corridor",
+            "Area": "New Home",
+            "Signifigance": "SAVE / Box  (Genocide only)"
+        },
+        {
+            "roomID": "232",
+            "Name": "Throne Entrance",
+            "Area": "New Home",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "233",
+            "Name": "Stairway",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "234",
+            "Name": "Coffins",
+            "Area": "New Home"
+        },
+        {
+            "roomID": "235",
+            "Name": "Throne Room",
+            "Area": "New Home",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "236",
+            "Name": "The End",
+            "Area": "New Home",
+            "Signifigance": "SAVE"
+        },
+        {
+            "roomID": "237",
+            "Name": "Barrier",
+            "Area": "New Home",
+            "Signifigance": "Boss - Asgore (Neutral only) / Asriel (Pacifist only)"
+        },
+        {
+            "roomID": "238",
+            "Name": "Ending",
+            "Area": "New Home",
+            "Signifigance": "Ending"
+        },
+        {
+            "roomID": "239",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "240",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "241",
+            "Name": "ERROR Dog",
+            "Area": "ERROR"
+        },
+        {
+            "roomID": "242",
+            "Name": "Alphys' Secret Elevator",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "243",
+            "Name": "Crashed Elevator Interior",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "244",
+            "Name": "True Lab Entrance",
+            "Area": "True Lab",
+            "Signifigance": "ENTRANCE"
+        },
+        {
+            "roomID": "245",
+            "Name": "Path to True Lab",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "246",
+            "Name": "True Lab Lobby",
+            "Area": "True Lab",
+            "Signifigance": "SAVE / Shop"
+        },
+        {
+            "roomID": "247",
+            "Name": "Hall to Operating Room",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "248",
+            "Name": "Operating Room",
+            "Area": "True Lab",
+            "Signifigance": "Battle- Memoryheads"
+        },
+        {
+            "roomID": "249",
+            "Name": "Red Lock Room",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "250",
+            "Name": "True Lab Hall",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "251",
+            "Name": "True Lab Ward",
+            "Area": "True Lab",
+            "Signifigance": "SAVE / Yellow Key"
+        },
+        {
+            "roomID": "252",
+            "Name": "Golden Flower Room",
+            "Area": "True Lab",
+            "Signifigance": "Battle - Reaper Bird"
+        },
+        {
+            "roomID": "253",
+            "Name": "Blue Lock Room",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "254",
+            "Name": "True Lab Crossroads",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "255",
+            "Name": "Shower Room",
+            "Area": "True Lab",
+            "Signifigance": "Green Key"
+        },
+        {
+            "roomID": "256",
+            "Name": "Lemon Bread",
+            "Area": "True Lab",
+            "Signifigance": "Battle - Lemon Bread"
+        },
+        {
+            "roomID": "257",
+            "Name": "Yellow Lock Room (Tapes)",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "258",
+            "Name": "True Lab Freezer",
+            "Area": "True Lab",
+            "Signifigance": "Blue Key / Battle - Amalgate"
+        },
+        {
+            "roomID": "259",
+            "Name": "Green Lock Room",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "260",
+            "Name": "Fan Room",
+            "Area": "True Lab",
+            "Signifigance": "Battle - Endogeny"
+        },
+        {
+            "roomID": "261",
+            "Name": "True Lab Elevator Interior",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "262",
+            "Name": "Hall to Generator",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "263",
+            "Name": "Power Generator",
+            "Area": "True Lab"
+        },
+        {
+            "roomID": "264",
+            "Name": "Entry Seventeen",
+            "Area": "Secret"
+        },
+        {
+            "roomID": "265",
+            "Name": "Glyde's Room / Dev Door",
+            "Area": "Secret"
+        }
+    ]
+}

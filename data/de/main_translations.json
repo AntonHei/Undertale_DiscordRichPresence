@@ -1,0 +1,8 @@
+{
+	"discordUI": [
+		{
+			"details": "{room_Name} in {room_Area}",
+			"state": "LV: {player_LV} mit {player_kills} Kills"
+		}
+	]
+}
