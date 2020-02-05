@@ -103,8 +103,6 @@ def listToDict(lst):
 
 def prepareData():
     global data_kills, data_roomName, data_roomArea, data_roomAreaCodeName, data_Name, data_LV, data_playtimeSeconds, data_playtimeHours, data_deaths, config_showCurrentRoute, config_discordAppClientID, areaPicNames, refreshInterval
-    #file0
-    global player_kills_ruins, player_kills_snowdin, player_kills_waterfall, player_kills_hotland
 
     # Getting the UndertaleDRP Config settings
     config_showCurrentRoute = str(clearString(getDRPConfigData('UndertaleDRP', 'showRoute')).split(".")[0])
@@ -112,16 +110,11 @@ def prepareData():
     refreshInterval = int(clearString(getDRPConfigData('UndertaleDRP', 'refreshInterval')).split(".")[0])
 
     # Getting the Data
+    # Area kills
+    loadAreaKills()
 
     # Discord App Area Pics
     areaPicNames = listToDict(list(undertale_data['areaDiscordAppPicNames']))
-
-    # file0
-    # Kills in certain Areas
-    player_kills_ruins = str(getfile0Line(233))
-    player_kills_snowdin = str(getfile0Line(234))
-    player_kills_waterfall = str(getfile0Line(235))
-    player_kills_hotland = str(getfile0Line(236))
 
     # Rooms
     curKills = str(clearString(getConfigData('General', 'Kills')).split(".")[0])
@@ -145,6 +138,14 @@ def prepareData():
     data_playtimeSeconds = curPlaytimeINT / 30
     data_playtimeHours = str(round(float(((curPlaytimeINT/30)/60)/60), 2)) # Calculate Frames to Seconds then to Minutes to Hours and cut off after 2 decimal places
     data_deaths = curDeaths
+
+def loadAreaKills():
+    #file0 is being used
+    global player_kills_ruins, player_kills_snowdin, player_kills_waterfall, player_kills_hotland
+    player_kills_ruins = str(getfile0Line(233))
+    player_kills_snowdin = str(getfile0Line(234))
+    player_kills_waterfall = str(getfile0Line(235))
+    player_kills_hotland = str(getfile0Line(236))
 
 def clearString(str):
     str = str.replace('"', '')
@@ -185,9 +186,10 @@ def loadTranslations():
 
 # Routes: 0 - Neutral; 1 - Genocide
 def caluclateCurrentRoute():
+    loadAreaKills()
     ruinsNeededKills = 20
     snowdinNeededKills = 16
-    waterfallNeededKills = 20
+    waterfallNeededKills = 18
     hotlandNeededKills = 40
 
     if (data_roomAreaCodeName == "ruins" and int(player_kills_ruins) >= ruinsNeededKills):
