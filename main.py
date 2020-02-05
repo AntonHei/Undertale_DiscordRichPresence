@@ -10,28 +10,38 @@ import configparser
 import os
 from os import path
 import json
+import linecache
 
 # General
 config = configparser.ConfigParser()
+file0 = configparser.ConfigParser()
 drpconfig = configparser.ConfigParser()
 undertaleDRPConfig = path.expandvars('config.ini')
 saveGamePath = path.expandvars(r'%LOCALAPPDATA%' + r'\UNDERTALE\undertale.ini')
+file0GamePath = path.expandvars(r'%LOCALAPPDATA%' + r'\UNDERTALE\file0')
 undertaleDataPath = path.expandvars(r'data\{language}\undertale_data.json')
 undertaleTranslationPath = path.expandvars(r'data\{language}\main_translations.json')
 
 # UNDERTALE_DRP Data
-config_areaBigLogoState = False
-config_discordAppClientID = ""  # Will be changed automaticaly
+config_showCurrentRoute = True
+config_discordAppClientID = ""
 
 # UNDERTALE Data
 data_kills = ""
 data_roomName = ""
 data_roomArea = ""
+data_roomAreaCodeName = ""
 data_Name = ""
 data_LV = ""
 data_playtimeSeconds = ""
 data_playtimeHours = ""
 data_deaths = ""
+
+# file0 Data
+player_kills_ruins = None
+player_kills_snowdin = None
+player_kills_waterfall = None
+player_kills_hotland = None
 
 # Runtime Vars
 startTime = ""
@@ -79,15 +89,25 @@ def getDRPConfigData(section, dataname):
 def getConfigData(section, dataname):
     return config[section][dataname]
 
+def getfile0Line(line):
+    # Decrement with 1 because arrays start at 0
+    line -= 1
+    try:
+        return open(file0GamePath, "r").readlines()[line]
+    except:
+        return 0
+
 def listToDict(lst):
     op = {i: lst[i] for i in range(0, len(lst))}
     return op
 
 def prepareData():
-    global data_kills, data_roomName, data_roomArea, data_Name, data_LV, data_playtimeSeconds, data_playtimeHours, data_deaths, config_areaBigLogoState, config_discordAppClientID, areaPicNames, refreshInterval
+    global data_kills, data_roomName, data_roomArea, data_roomAreaCodeName, data_Name, data_LV, data_playtimeSeconds, data_playtimeHours, data_deaths, config_showCurrentRoute, config_discordAppClientID, areaPicNames, refreshInterval
+    #file0
+    global player_kills_ruins, player_kills_snowdin, player_kills_waterfall, player_kills_hotland
 
     # Getting the UndertaleDRP Config settings
-    config_areaBigLogoState = str(clearString(getDRPConfigData('UndertaleDRP', 'areaBigLogo')).split(".")[0])
+    config_showCurrentRoute = str(clearString(getDRPConfigData('UndertaleDRP', 'showRoute')).split(".")[0])
     config_discordAppClientID = str(clearString(getDRPConfigData('UndertaleDRP', 'discordAppClientID')).split(".")[0])
     refreshInterval = int(clearString(getDRPConfigData('UndertaleDRP', 'refreshInterval')).split(".")[0])
 
@@ -95,6 +115,13 @@ def prepareData():
 
     # Discord App Area Pics
     areaPicNames = listToDict(list(undertale_data['areaDiscordAppPicNames']))
+
+    # file0
+    # Kills in certain Areas
+    player_kills_ruins = str(getfile0Line(233))
+    player_kills_snowdin = str(getfile0Line(234))
+    player_kills_waterfall = str(getfile0Line(235))
+    player_kills_hotland = str(getfile0Line(236))
 
     # Rooms
     curKills = str(clearString(getConfigData('General', 'Kills')).split(".")[0])
@@ -112,6 +139,7 @@ def prepareData():
     data_kills = curKills
     data_roomName = undertale_data['rooms'][curRoomINT]['Name']
     data_roomArea = undertale_data['rooms'][curRoomINT]['Area']
+    data_roomAreaCodeName = undertale_data['rooms'][curRoomINT]['Area_codename']
     data_Name = curName
     data_LV = curLV
     data_playtimeSeconds = curPlaytimeINT / 30
@@ -127,14 +155,21 @@ def getAreaPicName(areaname):
 
 def convertToReadable(str):
     # Location
-    str = str.replace("{room_Name}", data_roomName)
-    str = str.replace("{room_Area}", data_roomArea)
+    str = str.replace("{room_name}", data_roomName)
+    str = str.replace("{room_area}", data_roomArea)
+    str = str.replace("{room_area_code_name}", data_roomAreaCodeName)
 
     # Player
-    str = str.replace("{player_LV}", data_LV)
+    str = str.replace("{player_lv}", data_LV)
     str = str.replace("{player_kills}", data_kills)
     str = str.replace("{player_deaths}", data_deaths)
     str = str.replace("{player_name}", data_Name)
+
+    # Area Kills
+    str = str.replace("{player_kills_ruins}", player_kills_ruins)
+    str = str.replace("{player_kills_snowdin}", player_kills_snowdin)
+    str = str.replace("{player_kills_waterfall}", player_kills_waterfall)
+    str = str.replace("{player_kills_hotland}", player_kills_hotland)
 
     # General
     str = str.replace("{played_time}", data_playtimeHours)
@@ -148,6 +183,71 @@ def loadTranslations():
     curDetails = convertToReadable(undertale_translations['discordUI'][0]['details'])
     curState = convertToReadable(undertale_translations['discordUI'][0]['state'])
 
+# Routes: 0 - Neutral; 1 - Genocide
+def caluclateCurrentRoute():
+    ruinsNeededKills = 20
+    snowdinNeededKills = 16
+    waterfallNeededKills = 20
+    hotlandNeededKills = 40
+
+    if (data_roomAreaCodeName == "ruins" and int(player_kills_ruins) >= ruinsNeededKills):
+        return 1
+    if (data_roomAreaCodeName == "snowdin" and int(player_kills_snowdin) >= snowdinNeededKills):
+        return 1
+    if (data_roomAreaCodeName == "waterfall" and int(player_kills_waterfall) >= waterfallNeededKills):
+        return 1
+    if (data_roomAreaCodeName == "hotland" and int(player_kills_hotland) >= hotlandNeededKills):
+        return 1
+    return 0
+
+def updateRPCWithRoute():
+    if (caluclateCurrentRoute() == 0):
+        RPC.update(
+            details=curDetails,
+            start=time.time() - int(data_playtimeSeconds),
+            large_image=getAreaPicName(data_roomArea),
+            large_text=data_roomArea,
+            small_image="sans_neutral",
+            small_text="Neutral Run",
+            state=curState
+        )
+    # If Route is Genocide
+    if (caluclateCurrentRoute() == 1):
+        RPC.update(
+            details=curDetails,
+            start=time.time() - int(data_playtimeSeconds),
+            large_image=getAreaPicName(data_roomArea),
+            large_text=data_roomArea,
+            small_image="sans_genocide",
+            small_text="Genocide Run",
+            state=curState
+        )
+
+def updateRPC(calcNewTime):
+    #If time should be calculated or should continue
+    if(calcNewTime == True):
+        if (config_showCurrentRoute == "True"):
+            updateRPCWithRoute()
+        else:
+            RPC.update(
+                details=curDetails,
+                start=time.time() - int(data_playtimeSeconds),
+                large_image=getAreaPicName(data_roomArea),
+                large_text=data_roomArea,
+                state=curState
+            )
+    else:
+        if (config_showCurrentRoute == "True"):
+            updateRPCWithRoute()
+        else:
+            RPC.update(
+                details=curDetails,
+                start=startTime,
+                large_image=getAreaPicName(data_roomArea),
+                large_text=data_roomArea,
+                state=curState
+            )
+
 def startUpdatePresence():
     global startTime
     print("Started Rich Presence")
@@ -156,24 +256,8 @@ def startUpdatePresence():
     # Loading Translations
     loadTranslations()
 
-    if(config_areaBigLogoState == "True"):
-        RPC.update(
-            details=curDetails,
-            start=time.time()-int(data_playtimeSeconds),
-            large_image=getAreaPicName(data_roomArea),
-            large_text=data_roomArea,
-            state=curState
-        )
-    else:
-        RPC.update(
-            details=curDetails,
-            start=time.time() - int(data_playtimeSeconds),
-            small_image=getAreaPicName(data_roomArea),
-            small_text=data_roomArea,
-            large_image="undertale",
-            large_text="UNDERTALE",
-            state=curState
-        )
+    # Updates RPC with calculating a new Time
+    updateRPC(True)
 
 def updatePresence():
     print("Updated Rich Presence")
@@ -181,24 +265,9 @@ def updatePresence():
     # Loading Translations
     loadTranslations()
 
-    if (config_areaBigLogoState == "True"):
-        RPC.update(
-            details=curDetails,
-            start=startTime,
-            large_image=getAreaPicName(data_roomArea),
-            large_text=data_roomArea,
-            state=curState
-        )
-    else:
-        RPC.update(
-            details=curDetails,
-            start=startTime,
-            small_image=getAreaPicName(data_roomArea),
-            small_text=data_roomArea,
-            large_image="undertale",
-            large_text="UNDERTALE",
-            state=curState
-        )
+    # Updates RPC without calculating a new Time
+    # Otherwise the Time would everytime reset to the time till the last save
+    updateRPC(False)
 
 # Startup Discord Rich Presence
 drpConfigLoad()

@@ -1,8 +1,10 @@
 {
 	"discordUI": [
 		{
-			"details": "{room_Name} in {room_Area}",
-			"state": "LV: {player_LV} with {player_kills} kills"
+			"details": "{room_name} in {room_area}",
+			"state": "LV: {player_lv} Kills: {player_kills} Deaths: {player_deaths}",
+			"routeText_neutral": "Neutral Run",
+			"routeText_genocide": "Genocide Run"
 		}
 	]
 }
