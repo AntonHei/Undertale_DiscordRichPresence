@@ -36,10 +36,15 @@ What the discord Presence shows can be setup in the **config.ini**, as well as t
 <br>
 ### main_translations.json ###
 In this file you can use these variable placeholders:
- - **{room_Name}** - The name of the room the player is in (Room names are customizable in: "undertale_data.json")
- - **{room_Area}** - The name of the Area the player is in (Area names are customizable in: "undertale_data.json")
- - **{player_LV}** - The Player's LV, LOVE or Level of Violence
+ - **{room_name}** - The name of the room the player is in (Room names are customizable in: "undertale_data.json")
+ - **{room_area}** - The name of the Area the player is in (Area names are customizable in: "undertale_data.json")
+  - **{room_area_code_name}** - The name of the Area the player is in (Area code names are customizable in: "undertale_data.json")
+ - **{player_lv}** - The Player's LV, LOVE or Level of Violence
  - **{player_kills}** - The kill count of the player
  - **{player_deaths}** - The death count of the player
  - **{player_name}** - The name chosen at the begging of the game.
+ - **{player_kills_ruins}** - The kill count of the player in the ruins area.
+ - **{player_kills_snowdin}** - The kill count of the player in the snowdin area.
+ - **{player_kills_waterfall}** - The kill count of the player in the waterfall area.
+ - **{player_kills_hotland}** - The kill count of the player in the hotland area.
  - **{played_time}** - The played time, since last savegame (in Hours, round to 2 decimal places).
