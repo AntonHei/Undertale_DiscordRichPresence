@@ -25,7 +25,7 @@ What the discord Presence shows can be setup in the **config.ini**, as well as t
 *Standard set as the official one by me, you can create your own and adress it*
 <br>
 <br>
-**language="de"**
+**language="en"**
 <br>
 *Change this to the available ones in the "data" folder*
 <br>
