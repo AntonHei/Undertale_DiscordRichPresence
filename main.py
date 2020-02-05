@@ -102,7 +102,11 @@ def prepareData():
     curName = str(clearString(getConfigData('General', 'Name')).split(".")[0])
     curLV = str(clearString(getConfigData('General', 'Love')).split(".")[0])
     curPlaytimeINT = int(clearString(getConfigData('General', 'Time')).split(".")[0])
-    curDeaths = str(clearString(getConfigData('General', 'Gameover')).split(".")[0])
+    try:
+        curDeaths = str(clearString(getConfigData('General', 'Gameover')).split(".")[0])
+    except:
+        curDeaths = "0"
+
 
     # Setting the Data
     data_kills = curKills
