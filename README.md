@@ -35,7 +35,7 @@ and this is what it looks like in closeup (text is customizable)
 <br>
 **showRoute="True"**
 <br>
-*Change this to false to show the current Route with a small Picture in Discord*
+*If this is True IT will show the current Route with a small Picture in Discord*
 <br>
 ### main_translations.json ###
 In this file you can use these variable placeholders:
